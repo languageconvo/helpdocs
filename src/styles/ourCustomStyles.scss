@@ -1,0 +1,212 @@
+/* Converge fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Disable updated at times */
+.author-text .updated-at {
+  display: none;
+}
+
+/* Disable Top Articles */
+#home #top-articles-container,
+#topArticles{
+  display: none !important;
+}
+/* Change hero background in accordance with main color */
+#homeBanner {
+  background-color: #fff;
+}
+/* Move menu links into second grid column and re-arrange columns, some prime-number magix*/
+nav{
+  -ms-grid-columns: 12fr 29fr;
+  grid-template-columns: 12fr 29fr;
+}
+.navRightItems{
+  -ms-grid-column: 2;
+  grid-column: 2;
+  list-style: none;
+  padding-left: 1.88px;}
+.hnItems a,
+footer .ftItems a {padding: 12px 0 4px;
+  margin: 0 1.06rem;
+  color: #887f95;
+  opacity: .8;
+  font-size: 100%;
+  font-weight: 400;
+  border:0;
+  transition:	all .35s ease-in-out;
+  -webkit-transition:	all .35s ease-in-out;}
+.hnItems li:first-child > a,
+.hnItems li:nth-child(2) > a,
+.hnItems li:nth-child(3) > a{margin:0 1.06rem;
+  padding: 14px 0 4px;
+  letter-spacing: 0.2px;}
+.hnItems a:hover{border-bottom: 1.9px solid #38c690;
+  padding-bottom: 4px;
+  transition-duration: .5s;}
+#homeNav > nav {padding: 10px 0;
+  margin:0 auto;
+  max-width:1040px;
+  width:100%;}
+.hnLogo {max-width: 141px;
+  height: 47px;
+  vertical-align: middle;
+  max-height: 47px;}
+.navLeft{padding: 8px 1rem 0 0;}
+.navRightItems{
+  -ms-grid-column: 2;
+  grid-column: 2;
+  list-style: none;
+  display: block;}
+.navRightItems ul{display: flex;
+  font-size: 17px;}
+.navRightItems li {
+  display: block;
+  margin: 0;
+  padding: 0 0 0 0.3em;
+  line-height: 1.6em;}
+.navRightItems li a{
+  display: block;
+  position: relative;
+}
+.hnItem.contactButton{display:none;}
+/* Styling Get started button */
+.navRightItems li:nth-child(4){
+  margin-left: auto;
+  -webkit-transition: box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: box-shadow .25s ease,transform .25s ease;
+  transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
+}
+.navRightItems li:nth-child(4)>a{
+  background: #38c690;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 9px 30px;
+  box-shadow: 0 0.29rem 0.58rem rgba(0,0,0,.15);
+  border-radius: 9.6px;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: box-shadow .25s ease,transform .25s ease;
+  transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease;
+}
+
+.navRightItems li:nth-child(4):hover{
+  -webkit-transform: translate3d(0,-3px,0);
+  transform: translate3d(0,-3px,0);}
+
+.navRightItems li:nth-child(4)>a:hover{
+  background: #30a87a;
+  box-shadow: none;
+}
+/* Color hover styles of menu individually */
+.hnItems li:first-child > a:hover{border-bottom: 1.9px solid #fcad26;}
+.hnItems li:nth-child(2) > a:hover{border-bottom: 1.9px solid #38c690;}
+.hnItems li:nth-child(3) > a,
+footer .ftItems li:nth-child(3) > a {border-bottom: 1.9px solid #6f42c1;}
+.hnItems li:nth-child(5) > a:hover{border-bottom: 1.9px solid #fcad26;}
+
+/* Move search container on child pages to hero like position */
+#search-container.smallSearchContainer {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  -ms-grid-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 20px 0;
+}
+/* Fix breadcrumbs to stay in line */
+.bcList li > * {
+  vertical-align:middle;
+}
+/* Disable white mobile menu switch */
+.hnMobileNavButton,
+.mobileMenuPopup{
+  display: none;
+}
+/* Footer */
+footer{
+  grid-template-columns: 12fr 29fr !important;
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+  border-top: none!important;}
+footer .navRightItems li:nth-child(4)>a{
+  color:#fff!important;}
+@media only screen and (min-width: 901px) {
+  #overlay{display:none!important;}
+  .mobileMenuPopup{display: none!important;}
+}
+@media only screen and (max-width: 900px) {
+  .hnMobileNavButton {
+    display: block;
+  }
+  /* Adjusting Bars built-in mobile nav */
+  .hnMobileIcon {
+    stroke: #090a0b;
+  }
+  /* Mobile menu adjustment */
+  .mobileMenuPopup.popup{
+    background-color: #dbd3ec;
+    padding: 20px 20px 25px 20px;
+    border-radius: 6px;
+    overflow-y: auto;}
+  .popup ul lu {
+    padding: 0 30px;}
+  .mobileMenuPopup ul li:nth-child(4){
+    display: inline-block;
+    padding: 10px 30px;
+    background: #38c690;
+    border-radius: 6px;
+    margin: 0; }
+  .mobileMenuPopup ul li:nth-child(4) > a{
+    color: #fff;}
+  .mobileMenuPopup ul li:nth-child(5){
+    display: inline-block;
+    padding: 0 1.7rem;}
+
+  .popup ul li a {
+    color: #887f95;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Montserrat,sans-serif;
+    font-size: 1rem;
+  }
+
+  .navRightItems {
+    display: none;
+  }
+}
+
+// background color of main content divs = white
+#categoryContent,
+#breadcrumbs,
+#articleContent,
+#searchPage,
+#feedback {
+  background-color: $primaryBackgroundColor;
+}
+
+// background color of search bar to match our website
+.scInstantSearch input {
+  background-color: #edf1ea;
+}
+
+// region typography
+
+// font weight to match our site
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+// home page hero title "how can we help you?"
+h1.scTitle{
+  color: #090a0b;
+  font-size: 31px;
+  text-align: center;
+}
+
+// endregion

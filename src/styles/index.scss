@@ -1,0 +1,6 @@
+// our own custom vars
+@import 'vars';
+
+// import the original css from HelpDocs before ours, so that our styles can override it
+@import 'originalHelpdocsStyles';
+@import 'ourCustomStyles';
