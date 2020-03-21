@@ -796,19 +796,12 @@ span.fa.fa-search {
   padding: 1em;
   background-color: #fff;
   border: none;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
   -webkit-appearance: none;
   -moz-appearance: none;
   height: 60px;
   display: block;
   width: 100%;
-  transition: box-shadow .25s ease;
-  transition: box-shadow .25s ease, -webkit-box-shadow .25s ease;
   z-index: 999
-}
-
-.scInstantSearch input:focus {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36)
 }
 
 .scInstantSearch input,
@@ -853,7 +846,7 @@ input::-webkit-input-placeholder {
 
 .srHit:hover,
 .spResult:hover {
-  background-color: #f1f1f1;
+  background-color: $searchBackgroundColorHover;
   cursor: pointer;
   border-radius: 4px
 }

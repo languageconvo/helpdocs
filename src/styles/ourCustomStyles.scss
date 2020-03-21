@@ -190,6 +190,16 @@ footer .navRightItems li:nth-child(4)>a{
   background-color: $primaryBackgroundColor;
 }
 
+// this allows the "all topics" title to stretch across the entire page
+@media only screen and (max-width: 1000px) {
+  .cTitle,
+  .cCategory {
+    grid-column: 2;
+    grid-row: auto;
+    margin-left: 1em;
+  }
+}
+
 // region typography
 
 // font weight to match our site
@@ -202,7 +212,7 @@ h1, h2, h3, h4, h5, h6,
 // home page hero title "how can we help you?"
 h1.scTitle{
   color: #090a0b;
-  font-size: 31px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -214,6 +224,7 @@ h1.ahTitle {
 // main "all help categories" title on the home page
 h2.cTitle.homepage {
   margin-top: 30px;
+  font-size: 28px;
 }
 
 // search results titles

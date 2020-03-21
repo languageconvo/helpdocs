@@ -675,18 +675,12 @@ span.fa.fa-search {
   padding: 1em;
   background-color: #fff;
   border: none;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
   -webkit-appearance: none;
   -moz-appearance: none;
   height: 60px;
   display: block;
   width: 100%;
-  transition: box-shadow .25s ease;
-  transition: box-shadow .25s ease, -webkit-box-shadow .25s ease;
   z-index: 999; }
-
-.scInstantSearch input:focus {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36); }
 
 .scInstantSearch input,
 input::-webkit-input-placeholder {
@@ -723,7 +717,7 @@ input::-webkit-input-placeholder {
 
 .srHit:hover,
 .spResult:hover {
-  background-color: #f1f1f1;
+  background-color: #fbfff8;
   cursor: pointer;
   border-radius: 4px; }
 
@@ -1994,20 +1988,28 @@ footer .navRightItems li:nth-child(4) > a {
 #feedback {
   background-color: #ffffff; }
 
+@media only screen and (max-width: 1000px) {
+  .cTitle,
+  .cCategory {
+    grid-column: 2;
+    grid-row: auto;
+    margin-left: 1em; } }
+
 h1, h2, h3, h4, h5, h6,
 .bcList li {
   font-weight: 300; }
 
 h1.scTitle {
   color: #090a0b;
-  font-size: 31px;
+  font-size: 30px;
   text-align: center; }
 
 h1.ahTitle {
   font-size: 26px; }
 
 h2.cTitle.homepage {
-  margin-top: 30px; }
+  margin-top: 30px;
+  font-size: 28px; }
 
 h4.srHitTitle {
   margin-bottom: 0px; }

@@ -11,14 +11,7 @@
       {{#unless this.parent_category_id}}
         <a class="cardLink" href="{{this.relative_url}}">
           <div class="cCategory card stack">
-            <div class="cCardIcon">
-              {{#if (hasPrefix this.icon "fa-")}}
-  	            <i class="fa fa-3x category-icon {{this.icon}}"></i>
-            	{{else if (hasPrefix this.icon "http")}}
-             	 	<img class="cCardIconImage" alt="Category icon" src="{{this.icon}}">
-            	{{/if}}
-            </div>
-            <h3 class="cCardTitle cardTitle">{{this.title}}</h3>
+            <h3 class="cCardTitle cardTitle"><img class="cCardIconImage" width="40" height="40" alt="Category icon" src="{{this.icon}}"> {{this.title}}</h3>
             <p class="cCardDescription">{{this.description}}</p>
             {{#if (gt this.meta.num_authors 0)}}
               <div class="cCardAuthorship">
