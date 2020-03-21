@@ -210,3 +210,108 @@ h1.scTitle{
 }
 
 // endregion
+
+// region background color everywhere
+/* Begin HelpDocs Team Edits */
+/* Apply background colors as #38c690 */
+#homeBanner {
+  background-color: #38c690;
+}
+/* Apply background colors as #38c690 */
+.contactPopup .cpSubmit,
+#doorbell-submit-button {
+  background-color: #38c690;
+}
+
+/* Apply color as #38c690 */
+.langLink,
+.cCardIcon, .cCardTitle, .aCardTitle, .spCardTitle,
+.snmenu a.sidebar-category:hover, .snmenu a.sidebar-article:hover,
+#tableOfContents a:hover,
+.bcList a,
+#articleBody a,
+#articleBody ul > li::before,
+.inline-code,
+code,
+.cpCheck:after {
+  color: #38c690;
+}
+
+/* Apply color as #ebf9f3 */
+.hnBrand,
+.hnItems a,
+.hnItem a,
+.contactPopup .cpSubmit,
+.scTitle, .taTitle, .faTitle,
+.faCardTitle, .taCardTitle,
+.taHit, .faHit,
+#doorbell-submit-button {
+  color: #ebf9f3;
+}
+
+/* Apply border-color as #38c690 */
+.contactPopup .cpName input:hover,
+.contactPopup .cpEmail input:hover,
+.contactPopup .cpTextarea textarea:hover,
+.contactPopup .cpName input:focus,
+.contactPopup .cpEmail input:focus,
+.contactPopup .cpTextarea textarea:focus,
+#prevNext .pnPrev:hover,
+#prevNext .pnNext:hover {
+  border-color: #38c690;
+}
+
+/* Apply border-color as #38c690 */
+#articleBody blockquote {
+  border-color: #38c690;
+}
+
+/* Apply color as #2c9e73 */
+#articleBody ol > li:before,
+.snmenu a.sidebar-category p.expanded, .snmenu a.sidebar-article.current p,
+.ticket-deflection-result a {
+  color: #2c9e73;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hnItem a {
+    color: #2c9e73;
+  }
+}
+
+/* Apply background-color as #ebf9f3 */
+#articleBody ol > li:before,
+.snmenu a.sidebar-category p.expanded, .snmenu a.sidebar-article.current p {
+  background-color: rgba(235, 249, 243);
+}
+
+/* Apply border-color as #ebf9f3 */
+#articleBody ol > li:after {
+  border: 1px solid rgba(235, 249, 243);
+}
+
+/* Apply fill as #38c690 */
+.fbPositiveIcon:hover .fbHighlightFill,
+.fbNeutralIcon:hover .fbHighlightFill,
+.fbNegativeIcon:hover .fbHighlightFill {
+  fill: #38c690;
+}
+
+/* Apply stroke as #38c690 */
+.fbPositiveIcon:hover .fbHighlightStroke,
+.fbNeutralIcon:hover .fbHighlightStroke,
+.fbNegativeIcon:hover .fbHighlightStroke {
+  stroke: #38c690;
+}
+
+/* Apply fill as #ebf9f3 */
+.hnLangFlag {
+  fill: #ebf9f3;
+}
+
+/* Apply fill as #38c690 */
+.aCardFeaturedIcon {
+  fill: #38c690;
+}
+/* End HelpDocs Team Edits */
+// endregion
