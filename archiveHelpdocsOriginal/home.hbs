@@ -5,7 +5,7 @@
 			{{> sidebar}}
 		</div>
 	</section>
-	<h2 class="cTitle homepage">{{i18n "all_categories" "All Help Topics"}}</h2>
+	<h2 class="cTitle">{{i18n "all_categories" "All Categories"}}</h2>
   <section id="categories" class="three-col-center">
     {{#each categories}}
       {{#unless this.parent_category_id}}
@@ -16,7 +16,10 @@
   	            <i class="fa fa-3x category-icon {{this.icon}}"></i>
             	{{else if (hasPrefix this.icon "http")}}
              	 	<img class="cCardIconImage" alt="Category icon" src="{{this.icon}}">
-            	{{/if}}
+							{{else if (eq this.icon "")}}
+							{{else}}
+								<i class="category-icon {{this.icon}}"></i>
+							{{/if}}
             </div>
             <h3 class="cCardTitle cardTitle">{{this.title}}</h3>
             <p class="cCardDescription">{{this.description}}</p>

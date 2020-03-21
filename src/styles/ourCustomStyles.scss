@@ -11,7 +11,7 @@
 
 /* Disable Top Articles */
 #home #top-articles-container,
-#topArticles{
+#topArticles {
   display: none !important;
 }
 /* Change hero background in accordance with main color */
@@ -19,7 +19,7 @@
   background-color: #fff;
 }
 /* Move menu links into second grid column and re-arrange columns, some prime-number magix*/
-nav{
+nav {
   -ms-grid-columns: 12fr 29fr;
   grid-template-columns: 12fr 29fr;
 }
@@ -190,16 +190,13 @@ footer .navRightItems li:nth-child(4)>a{
   background-color: $primaryBackgroundColor;
 }
 
-// background color of search bar to match our website
-.scInstantSearch input {
-  background-color: #edf1ea;
-}
-
 // region typography
 
 // font weight to match our site
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+h1, h2, h3, h4, h5, h6,
+.bcList li // this is the breadcrumb on category pages
+{
+  font-weight: 300;
 }
 
 // home page hero title "how can we help you?"
@@ -209,14 +206,31 @@ h1.scTitle{
   text-align: center;
 }
 
+// article titles
+h1.ahTitle {
+  font-size: 26px;
+}
+
+// main "all help categories" title on the home page
+h2.cTitle.homepage {
+  margin-top: 30px;
+}
+
+// search results titles
+h4.srHitTitle {
+  margin-bottom: 0px
+}
+
 // endregion
 
-// region background color everywhere
+// region provided by the helpdocs team, background/text color everywhere. if you don't use a custom template, this
+//  coloring comes from the config console in helpdocs
+
 /* Begin HelpDocs Team Edits */
-/* Apply background colors as #38c690 */
-#homeBanner {
-  background-color: #38c690;
-}
+///* Apply background colors as #38c690 */
+//#homeBanner {
+//  background-color: #38c690;
+//}
 /* Apply background colors as #38c690 */
 .contactPopup .cpSubmit,
 #doorbell-submit-button {
@@ -239,8 +253,6 @@ code,
 
 /* Apply color as #ebf9f3 */
 .hnBrand,
-.hnItems a,
-.hnItem a,
 .contactPopup .cpSubmit,
 .scTitle, .taTitle, .faTitle,
 .faCardTitle, .taCardTitle,
@@ -273,21 +285,15 @@ code,
   color: #2c9e73;
 }
 
-@media only screen and (max-width: 1000px) {
-  .hnItem a {
-    color: #2c9e73;
-  }
-}
-
 /* Apply background-color as #ebf9f3 */
 #articleBody ol > li:before,
 .snmenu a.sidebar-category p.expanded, .snmenu a.sidebar-article.current p {
-  background-color: rgba(235, 249, 243);
+  background-color: rgb(235, 249, 243);
 }
 
 /* Apply border-color as #ebf9f3 */
 #articleBody ol > li:after {
-  border: 1px solid rgba(235, 249, 243);
+  border: 1px solid rgb(235, 249, 243);
 }
 
 /* Apply fill as #38c690 */
@@ -314,4 +320,21 @@ code,
   fill: #38c690;
 }
 /* End HelpDocs Team Edits */
+// endregion
+
+// region search result fixes
+
+// background color of search bars
+.scInstantSearch input, // serach bar on the home page
+#hd-query // search bar on category pages
+{
+  background-color: $searchBackgroundColor;
+}
+
+// search results
+#searchresults {
+  background-color: $searchBackgroundColor;
+  overflow-x: hidden;
+}
+
 // endregion

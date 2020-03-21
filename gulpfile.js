@@ -7,6 +7,7 @@ gulp.task(
         buildHandlebars,
         buildScripts,
         buildStyles,
+        watch,
     ),
 );
 
@@ -24,4 +25,27 @@ function buildStyles() {
     return gulp.src(['src/styles/index.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dis'));
+}
+
+function watch() {
+    gulp.watch(
+        ['src/styles/**/*'],
+        gulp.series(
+            buildStyles,
+        ),
+    );
+
+    gulp.watch(
+        ['src/**/*.hbs'],
+        gulp.series(
+            buildHandlebars,
+        ),
+    );
+
+    gulp.watch(
+        ['src/**/*.js'],
+        gulp.series(
+            buildStyles,
+        ),
+    );
 }

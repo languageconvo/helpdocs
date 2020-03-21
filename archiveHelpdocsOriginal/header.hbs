@@ -1,4 +1,5 @@
 <section id="homeBanner">
+
   <!-- Main navigation bar -->
   <header id="homeNav">
     <nav role="navigation">
@@ -11,6 +12,23 @@
           <span class="hnBrand" aria-label="{{config.brand}}">{{config.brand}}</span>
         {{/if}}
       </a>
+
+      {{#unless (page "categories")}}
+        <!-- Search bar -->
+        <section id="search-container"{{#unless (page "home")}} class="smallSearchContainer" aria-label="Search section" {{/unless}}>
+          <div class="smallInstantSearch" id="instant-search">
+            <form action="{{rootPath meta.home_path}}/search" method="GET">
+              <label><input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Help Me With..."}}" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="{{i18n "help_me_with" "Help Me With..."}} search bar"></label>
+            </form>
+          </div>
+
+          <!-- Search results -->
+          <section id="searchresults" {{#unless (page "home")}} class="smallSearchHits" aria-label="Search results"{{/unless}}>
+            <div class="srHits" id="hits" aria-label="Search hit"></div>
+          </section>
+
+        </section>
+      {{/unless}}
 
       <!-- Navigation links -->
       <div class="hnItems navRightItems">
@@ -26,7 +44,7 @@
           {{#if config.nav_items}}
             {{#each config.nav_items}}
               <li class="hnItem" href="#">
-                <a class="hnLink" rel="noreferrer" href="{{this.href}}" aria-label="{{this.title}} navigation item">
+                <a class="hnLink" rel="noreferrer" href="{{this.href}}" target="{{fallback this.target "_blank"}}" aria-label="{{this.title}} navigation item">
                   {{this.title}}
                 </a>
               </li>
