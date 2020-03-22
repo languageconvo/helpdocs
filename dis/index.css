@@ -1686,8 +1686,7 @@ input::-webkit-input-placeholder {
   .cTitle,
   .cCategory {
     grid-column: auto;
-    grid-row: auto;
-    margin-left: 1em; } }
+    grid-row: auto; } }
 
 @media only screen and (max-width: 800px) {
   footer {
@@ -1891,6 +1890,10 @@ h4.srHitTitle {
 
 h2.cTitle {
   font-size: 30px; }
+
+@media only screen and (max-width: 1000px) {
+  h2.cTitle {
+    margin-top: 30px; } }
 
 h4.aCardTitle {
   font-size: 21px; }
@@ -2106,8 +2109,7 @@ footer .navRightItems li:nth-child(4) > a {
   .cTitle,
   .cCategory {
     grid-column: 2;
-    grid-row: auto;
-    margin-left: 1em; } }
+    grid-row: auto; } }
 
 #categoryContent {
   margin-top: 30px; }
