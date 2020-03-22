@@ -1,0 +1,5 @@
+// don't display top articles
+#home #top-articles-container,
+#topArticles {
+  display: none !important;
+}

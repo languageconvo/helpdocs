@@ -1,6 +1,12 @@
-// our own custom vars
+// our own custom vars first, so they can be used everywhere
 @import 'vars';
 
-// import the original css from HelpDocs before ours, so that our styles can override it
+// the original css from HelpDocs before ours, so that our styles (being below these) will override them
 @import 'originalHelpdocsStyles';
-@import 'ourCustomStyles';
+
+// our custom styling
+@import 'color';
+@import 'hero';
+@import 'navbar';
+@import 'search';
+@import 'typography';

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+// font weight to match our site
+h1, h2, h3, h4, h5, h6,
+.bcList li // this is the breadcrumb on category pages
+{
+  font-weight: 300;
+}
+
+// home page hero title "how can we help you?"
+h1.scTitle{
+  color: #090a0b;
+  font-size: 30px;
+  text-align: center;
+}
+
+// article titles
+h1.ahTitle {
+  font-size: 26px;
+}
+
+// main "all help categories" title on the home page
+h2.cTitle.homepage {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+// search results titles
+h4.srHitTitle {
+  margin-bottom: 0px
+}

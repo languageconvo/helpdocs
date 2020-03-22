@@ -1,0 +1,12 @@
+// background color of search bars
+.scInstantSearch input, // search bar on the home page
+#hd-query // search bar on category pages
+{
+  background-color: $searchBackgroundColor;
+}
+
+// search results bg color, and removing horizontal scrollbar
+#searchresults {
+  background-color: $searchBackgroundColor;
+  overflow-x: hidden;
+}
