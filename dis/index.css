@@ -1978,10 +1978,10 @@ footer .ftItems a {
 /* Styling Get started button */
 .navRightItems li:nth-child(4) {
   margin-left: auto;
-  -webkit-transition: box-shadow .25s ease,-webkit-transform .25s ease;
-  transition: box-shadow .25s ease,-webkit-transform .25s ease;
-  transition: box-shadow .25s ease,transform .25s ease;
-  transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease; }
+  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease; }
 
 .navRightItems li:nth-child(4) > a {
   background: #38c690;
@@ -1992,10 +1992,10 @@ footer .ftItems a {
   border-radius: 9.6px;
   white-space: nowrap;
   text-decoration: none;
-  -webkit-transition: box-shadow .25s ease,-webkit-transform .25s ease;
-  transition: box-shadow .25s ease,-webkit-transform .25s ease;
-  transition: box-shadow .25s ease,transform .25s ease;
-  transition: box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease; }
+  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, -webkit-transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease; }
 
 .navRightItems li:nth-child(4):hover {
   -webkit-transform: translate3d(0, -3px, 0);
@@ -2082,7 +2082,7 @@ footer .navRightItems li:nth-child(4) > a {
     color: #887f95;
     font-weight: 400;
     line-height: 1.5;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1rem; }
   .navRightItems {
     display: none; } }

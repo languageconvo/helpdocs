@@ -1,55 +1,59 @@
 <main id="categoryContent" class="three-col-center-focused-grid">
-  <!-- Side navigation -->
-	<section id="sidenav">
-		<div class="snmenu three-col-left stickOnScroll">
-			{{> sidebar}}
-		</div>
-	</section>
-  <section id="categories" class="three-col-center">
-    {{#each categories}}
-      {{#unless this.parent_category_id}}
-        <a class="cardLink" href="{{this.relative_url}}">
-          <div class="cCategory card stack">
-            <h3 class="cCardTitle cardTitle"><img class="cCardIconImage" width="40" height="40" alt="Category icon" src="{{this.icon}}"> {{this.title}}</h3>
-            <p class="cCardDescription">{{this.description}}</p>
-            {{#if (gt this.meta.num_authors 0)}}
-              <div class="cCardAuthorship">
-                <div class="cCardAuthorshipWrapper">
-									<div class="cCardAuthors">
-										{{#each this.authors}}
-	                    {{#if (lt @index 4)}}
-	                      {{#if this.profile_image}}
-	                        <img class="cCardAuthorshipAvatar" alt="author avatar" src="{{this.profile_image}}" {{#if this.name}}alt="{{this.name}}"{{/if}}>
-	                      {{/if}}
-	                    {{/if}}
-	                  {{/each}}
-									</div>
-									<div class="cCardAuthorshipMeta">
+    <!-- Side navigation -->
+    <section id="sidenav">
+        <div class="snmenu three-col-left stickOnScroll">
+            {{> sidebar}}
+        </div>
+    </section>
+    <section id="categories" class="three-col-center">
+        {{#each categories}}
+            {{#unless this.parent_category_id}}
+                <a class="cardLink" href="{{this.relative_url}}">
+                    <div class="cCategory card stack">
+                        <h3 class="cCardTitle cardTitle"><img class="cCardIconImage" width="40" height="40"
+                                                              alt="Category icon" src="{{this.icon}}"> {{this.title}}
+                        </h3>
+                        <p class="cCardDescription">{{this.description}}</p>
+                        {{#if (gt this.meta.num_authors 0)}}
+                            <div class="cCardAuthorship">
+                                <div class="cCardAuthorshipWrapper">
+                                    <div class="cCardAuthors">
+                                        {{#each this.authors}}
+                                            {{#if (lt @index 4)}}
+                                                {{#if this.profile_image}}
+                                                    <img class="cCardAuthorshipAvatar" alt="author avatar"
+                                                         src="{{this.profile_image}}"
+                                                         {{#if this.name}}alt="{{this.name}}"{{/if}}>
+                                                {{/if}}
+                                            {{/if}}
+                                        {{/each}}
+                                    </div>
+                                    <div class="cCardAuthorshipMeta">
 	                  <span class="cCardAuthorshipArticleCount">
 	                    {{this.meta.num_articles}}
-	                    {{#if (eq this.meta.num_articles 1)}}
-	                      {{i18n "article" "article"}}
-	                    {{else}}
-	                      {{i18n "articles" "articles"}}
-	                    {{/if}}
+                          {{#if (eq this.meta.num_articles 1)}}
+                              {{i18n "article" "article"}}
+                          {{else}}
+                              {{i18n "articles" "articles"}}
+                          {{/if}}
 										</span>
-                    <span class="cCardAuthorshipAuthorCount">
+                                        <span class="cCardAuthorshipAuthorCount">
                       {{i18n "by" "by"}}
-                      {{this.meta.num_authors}}
-                      {{#if (eq this.meta.num_authors 1)}}
-                        {{i18n "author" "author"}}
-                      {{else}}
-                        {{i18n "authors" "authors"}}
-                      {{/if}}
+                                            {{this.meta.num_authors}}
+                                            {{#if (eq this.meta.num_authors 1)}}
+                                                {{i18n "author" "author"}}
+                                            {{else}}
+                                                {{i18n "authors" "authors"}}
+                                            {{/if}}
                     </span>
-									</div>
-                </div>
-              </div>
-            {{/if}}
-          </div>
-        </a>
-      {{/unless}}
-    {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
+                    </div>
+                </a>
+            {{/unless}}
+        {{/each}}
 
-  </section>
+    </section>
 </main>
