@@ -1,6 +1,4 @@
-<
-script
-type = "text/javascript" >
+<script type = "text/javascript">
 window.hd_util_params = {
     disable_legacy_search_timers: true,
     enable_linking_headings: true,
