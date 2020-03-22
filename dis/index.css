@@ -2062,7 +2062,7 @@ footer .navRightItems li:nth-child(4) > a {
   /* Mobile menu adjustment */
   .mobileMenuPopup.popup {
     background-color: #dbd3ec;
-    padding: 20px 20px 25px 20px;
+    padding: 5px 20px 5px 20px;
     border-radius: 6px;
     overflow-y: auto; }
   .popup ul lu {
@@ -2086,6 +2086,9 @@ footer .navRightItems li:nth-child(4) > a {
     font-size: 1rem; }
   .navRightItems {
     display: none; } }
+
+.hnMobileNavButton.active ~ .hnMobileItems.mobileMenuPopup.popup {
+  display: block; }
 
 #home #top-articles-container,
 #topArticles {
