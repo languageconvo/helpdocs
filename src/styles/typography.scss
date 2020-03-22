@@ -45,18 +45,16 @@ h2.cTitle {
   font-size: 30px;
 }
 
+// on small screens, make the top margin smaller
+@media only screen and (max-width:1000px) {
+  h2.cTitle {
+    margin-top: 30px;
+  }
+}
+
 // within a category, the card titles
 h4.aCardTitle {
   font-size: 21px;
-}
-
-// endregion
-
-// region individual article page
-
-// article titles
-h1.ahTitle {
-  font-size: 26px;
 }
 
 // endregion

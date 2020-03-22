@@ -1,0 +1,37 @@
+// bg color of the author "last edited by" section
+#ahAuthorship {
+  background-color: $searchBackgroundColor;
+}
+
+// "how did we do?" bg color
+#feedback {
+  background-color: $searchBackgroundColor;
+}
+
+// hovering over the related articles
+.raHit:hover {
+  background-color: $searchBackgroundColor;
+}
+
+// main article heading
+h1.ahTitle {
+  font-size: 28px;
+}
+
+// the "how did we do" heading
+h3.fbTitle {
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+// the "related articles" heading
+h3.raTitle {
+  font-size: 26px;
+}
+
+// related article titles
+h4.raCardTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
