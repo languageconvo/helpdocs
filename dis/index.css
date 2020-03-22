@@ -1866,9 +1866,37 @@ code,
   fill: #38c690; }
 
 /* End HelpDocs Team Edits */
-#home #top-articles-container,
-#topArticles {
-  display: none !important; }
+* {
+  font-family: "Montserrat", sans-serif; }
+
+h1, h2, h3, h4, h5, h6,
+p,
+a,
+.bcList li {
+  font-weight: 400; }
+
+h1.scTitle {
+  color: #090a0b;
+  font-size: 30px;
+  text-align: center; }
+
+h3.cCardTitle {
+  font-size: 26px; }
+
+.sidebar-category > p {
+  font-weight: 700; }
+
+h4.srHitTitle {
+  margin-bottom: 0; }
+
+h2.cTitle {
+  font-size: 30px; }
+
+h4.aCardTitle {
+  font-size: 21px; }
+
+h1.ahTitle {
+  font-size: 26px; }
 
 /* Disable updated at times */
 .author-text .updated-at {
@@ -2059,6 +2087,10 @@ footer .navRightItems li:nth-child(4) > a {
   .navRightItems {
     display: none; } }
 
+#home #top-articles-container,
+#topArticles {
+  display: none !important; }
+
 .scInstantSearch input,
 #hd-query {
   background-color: #edf1ea; }
@@ -2067,24 +2099,12 @@ footer .navRightItems li:nth-child(4) > a {
   background-color: #edf1ea;
   overflow-x: hidden; }
 
-* {
-  font-family: "Montserrat", sans-serif; }
+@media only screen and (max-width: 1000px) {
+  .cTitle,
+  .cCategory {
+    grid-column: 2;
+    grid-row: auto;
+    margin-left: 1em; } }
 
-h1, h2, h3, h4, h5, h6,
-.bcList li {
-  font-weight: 300; }
-
-h1.scTitle {
-  color: #090a0b;
-  font-size: 30px;
-  text-align: center; }
-
-h1.ahTitle {
-  font-size: 26px; }
-
-h2.cTitle.homepage {
-  margin-top: 30px;
-  font-size: 28px; }
-
-h4.srHitTitle {
-  margin-bottom: 0px; }
+#categoryContent {
+  margin-top: 30px; }

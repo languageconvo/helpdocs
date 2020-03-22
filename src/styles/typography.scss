@@ -5,10 +5,14 @@
 
 // font weight to match our site
 h1, h2, h3, h4, h5, h6,
+p,
+a,
 .bcList li // this is the breadcrumb on category pages
 {
-  font-weight: 300;
+  font-weight: 400;
 }
+
+// region home page
 
 // home page hero title "how can we help you?"
 h1.scTitle{
@@ -17,18 +21,41 @@ h1.scTitle{
   text-align: center;
 }
 
+// category titles on the home page
+h3.cCardTitle {
+  font-size: 26px;
+}
+
+// sidebar main categories on the home page
+.sidebar-category > p {
+  font-weight: 700;
+}
+
+// search results titles
+h4.srHitTitle {
+  margin-bottom: 0;
+}
+
+// endregion
+
+// region category page
+
+h2.cTitle {
+  font-size: 30px;
+}
+
+// within a category, the card titles
+h4.aCardTitle {
+  font-size: 21px;
+}
+
+// endregion
+
+// region individual article page
+
 // article titles
 h1.ahTitle {
   font-size: 26px;
 }
 
-// main "all help categories" title on the home page
-h2.cTitle.homepage {
-  margin-top: 30px;
-  font-size: 28px;
-}
-
-// search results titles
-h4.srHitTitle {
-  margin-bottom: 0px
-}
+// endregion
