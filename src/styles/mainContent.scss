@@ -1,0 +1,13 @@
+// this allows the "all topics" title to stretch across the entire page on smaller screens
+@media only screen and (max-width: 1000px) {
+  .cTitle,
+  .cCategory {
+    grid-column: 2;
+    grid-row: auto;
+    margin-left: 1em;
+  }
+}
+
+#categoryContent {
+  margin-top: 30px;
+}

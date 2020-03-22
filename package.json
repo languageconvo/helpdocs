@@ -1,0 +1,12 @@
+{
+  "name": "helpdocs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:languageconvo/helpdocs.git",
+  "author": "John Aitchison <john@languageconvo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

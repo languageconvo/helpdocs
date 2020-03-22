@@ -1,4 +1,7 @@
-<script type = "text/javascript">
+<link rel="stylesheet" href="https://cdn.helpdocs.io/css/v4/bars.min.css">
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/font-awesome.min.css">
+
+    <script type="text/javascript">
 window.hd_util_params = {
     disable_legacy_search_timers: true,
     enable_linking_headings: true,
@@ -22,7 +25,7 @@ function ready(fn) {
     } else if (document.addEventListener) {
         document.addEventListener('DOMContentLoaded', fn);
     } else {
-        document.attachEvent('onreadystatechange', function () {
+        document.attachEvent('onreadystatechange', function() {
             if (document.readyState != 'loading') {
                 fn();
             }
@@ -48,11 +51,11 @@ function removeClass(el, className) {
 }
 
 // Toggles menu bar SVG from 3 bars to a cross
-(function () {
-    ready(function () {
+(function() {
+    ready(function() {
         var mobileNav = document.querySelector('.hnMobileNavButton');
 
-        mobileNav.addEventListener('click', function () {
+        mobileNav.addEventListener('click', function() {
             if (mobileNav && mobileNav.classList.contains('active')) {
                 removeClass(mobileNav, 'active');
             } else {
@@ -63,8 +66,8 @@ function removeClass(el, className) {
 })();
 
 // ** Add class when < 3 categories to avoid stretched cards **
-(function () {
-    ready(function () {
+(function() {
+    ready(function() {
         var categories = document.getElementById('categories');
         if (!categories) return;
         var cards = categories.querySelectorAll('.card');
