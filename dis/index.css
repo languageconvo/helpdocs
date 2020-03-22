@@ -970,7 +970,7 @@ span#no-results {
 .snmenu a.sidebar-category p,
 .snmenu a.sidebar-article p {
   font-size: 16px;
-  padding: .25em .5em;
+  padding: 0em .5em;
   border-radius: 4px; }
 
 .snmenu a.sidebar-category .expanded,
@@ -1782,8 +1782,7 @@ input::-webkit-input-placeholder {
 #categoryContent,
 #breadcrumbs,
 #articleContent,
-#searchPage,
-#feedback {
+#searchPage {
   background-color: #ffffff; }
 
 /* Begin HelpDocs Team Edits */
@@ -1897,9 +1896,6 @@ h2.cTitle {
 
 h4.aCardTitle {
   font-size: 21px; }
-
-h1.ahTitle {
-  font-size: 26px; }
 
 /* Disable updated at times */
 .author-text .updated-at {
@@ -2113,3 +2109,26 @@ footer .navRightItems li:nth-child(4) > a {
 
 #categoryContent {
   margin-top: 30px; }
+
+#ahAuthorship {
+  background-color: #edf1ea; }
+
+#feedback {
+  background-color: #edf1ea; }
+
+.raHit:hover {
+  background-color: #edf1ea; }
+
+h1.ahTitle {
+  font-size: 28px; }
+
+h3.fbTitle {
+  margin-top: 10px;
+  font-size: 26px; }
+
+h3.raTitle {
+  font-size: 26px; }
+
+h4.raCardTitle {
+  margin-top: 10px;
+  margin-bottom: 10px; }
