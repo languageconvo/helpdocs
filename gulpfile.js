@@ -45,7 +45,7 @@ function watch() {
     gulp.watch(
         ['src/**/*.js'],
         gulp.series(
-            buildStyles,
+            buildScripts,
         ),
     );
 }
