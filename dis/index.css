@@ -1869,7 +1869,8 @@ h1, h2, h3, h4, h5, h6,
 p,
 a,
 .bcList li {
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1.5; }
 
 h1.scTitle {
   color: #090a0b;
@@ -1908,11 +1909,11 @@ header {
 
 .hnItems a,
 footer .ftItems a {
-  padding: 12px 0 4px;
-  margin: 0 1.06rem;
+  padding: 0.5rem 0;
+  margin: 0 1.7rem;
   color: #887f95;
   opacity: .8;
-  font-size: 100%;
+  font-size: 1.05rem;
   font-weight: 400;
   border: 0;
   transition: all .35s ease-in-out;
@@ -1932,7 +1933,7 @@ footer .ftItems a {
 
 nav {
   width: 100%;
-  max-width: 1220px;
+  max-width: 1190px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1941,23 +1942,33 @@ nav {
   margin: 0 auto; }
 
 .hnLogo {
-  max-width: 141px;
+  max-width: 171px;
   height: 47px;
-  vertical-align: middle;
-  max-height: 47px; }
+  vertical-align: top;
+  max-height: 47px;
+  box-sizing: border-box;
+  font-size: 1.1rem; }
 
 .navLeft {
-  padding: 8px 1rem 0 0; }
+  padding: .425rem 0;
+  display: inline-block;
+  margin-right: 1rem; }
 
 .navRightItems {
   -ms-grid-column: 2;
   grid-column: 2;
   list-style: none;
-  display: block; }
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center; }
 
 .navRightItems ul {
   display: flex;
-  font-size: 17px; }
+  font-size: 1.05rem;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 0 100%; }
 
 .navRightItems li {
   display: block;
@@ -1972,7 +1983,10 @@ nav {
 .hnItem.contactButton {
   display: none; }
 
-/* Styling Get started button */
+/* Styling Get started button, margin is needed to occupy free space */
+.navRightItems li:first-child {
+  margin-left: auto; }
+
 .navRightItems li:nth-child(4) {
   margin-left: auto;
   -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;

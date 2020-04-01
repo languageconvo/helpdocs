@@ -14,11 +14,11 @@ header {
 
 .hnItems a,
 footer .ftItems a {
-  padding: 12px 0 4px;
-  margin: 0 1.06rem;
+  padding: 0.5rem 0;
+  margin: 0 1.7rem; 
   color: #887f95;
   opacity: .8;
-  font-size: 100%;
+  font-size: 1.05rem;
   font-weight: 400;
   border: 0;
   transition: all .35s ease-in-out;
@@ -50,27 +50,40 @@ nav {
   margin: 0 auto;
 }
 
+// Logo styling desktop
 .hnLogo {
-  max-width: 141px;
+  max-width: 171px;
   height: 47px;
-  vertical-align: middle;
+  vertical-align: top;
   max-height: 47px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
 }
 
 .navLeft {
-  padding: 8px 1rem 0 0;
+  padding: .425rem 0;
+  display: inline-block;
+  margin-right: 1rem;
 }
+// Main menu styling
 
 .navRightItems {
   -ms-grid-column: 2;
   grid-column: 2;
   list-style: none;
-  display: block;
+  display: flex;
+  flex: 1 0 auto; // flex: grow shrink basis;
+  align-items: center;
 }
+
 
 .navRightItems ul {
   display: flex;
-  font-size: 17px;
+  font-size: 1.05rem;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 0 100%;
 }
 
 .navRightItems li {
@@ -89,21 +102,20 @@ nav {
   display: none;
 }
 
-/* Styling Get started button */
+/* Styling Get started button, margin is needed to occupy free space */
+.navRightItems li:first-child{
+  margin-left: auto;
+}
 .navRightItems li:nth-child(4) {
   margin-left: auto;
-  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease;
 }
 
 .navRightItems li:nth-child(4) > a {
   background: #38c690;
   border: 1px solid transparent;
   color: #fff;
-  padding: 9px 30px;
-  box-shadow: 0 0.29rem 0.58rem rgba(0, 0, 0, .15);
+  padding: 10px 30px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   border-radius: 9.6px;
   white-space: nowrap;
   text-decoration: none;
