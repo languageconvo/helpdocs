@@ -1,7 +1,9 @@
 // this is the orginal css provided by HelpDocs for v4 Bars theme. We've edited here, so if you want the actual
 // unedited original css, see the /archiveHelpdocsOriginal folder
 
-* {
+// edited root, it overrides the navbar
+// :root is faster than *, and with it you can target any content, such as SVG, XML, and such.
+:root {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: 100;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif
+  font-family: -apple-system,BlinkMacSystemFont, "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+
 }
 
 body {

@@ -2,3 +2,4 @@ node_modules/
 
  # all intellij files
 .idea/
+.svg

@@ -2,19 +2,15 @@
 .author-text .updated-at {
   display: none;
 }
-
-/* Move menu links into second grid column and re-arrange columns, some prime-number magix*/
-nav {
-  -ms-grid-columns: 12fr 29fr;
-  grid-template-columns: 12fr 29fr;
+/* Match header to main site. Navbar is now taken off banner to be direct child of body to ensure correct sticky. Applied to entire helpdocs */
+header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
 }
 
-.navRightItems {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  list-style: none;
-  padding-left: 1.88px;
-}
+
 
 .hnItems a,
 footer .ftItems a {
@@ -43,11 +39,15 @@ footer .ftItems a {
   transition-duration: .5s;
 }
 
-#homeNav > nav {
-  padding: 10px 0;
-  margin: 0 auto;
-  max-width: 1040px;
+nav {
   width: 100%;
+  max-width: 1190px; // -30px to max width since main site uses double padding on both parent and child containers
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 1rem 15px;
+  margin: 0 auto;
 }
 
 .hnLogo {
