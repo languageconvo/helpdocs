@@ -1912,7 +1912,6 @@ footer .ftItems a {
   padding: 0.5rem 0;
   margin: 0 1.7rem;
   color: #887f95;
-  opacity: .8;
   font-size: 1.05rem;
   font-weight: 400;
   border: 0;
@@ -1922,9 +1921,8 @@ footer .ftItems a {
 .hnItems li:first-child > a,
 .hnItems li:nth-child(2) > a,
 .hnItems li:nth-child(3) > a {
-  margin: 0 1.06rem;
-  padding: 14px 0 4px;
-  letter-spacing: 0.2px; }
+  margin: 0;
+  padding: 8px 0; }
 
 .hnItems a:hover {
   border-bottom: 1.9px solid #38c690;
@@ -1954,6 +1952,7 @@ nav {
   display: inline-block;
   margin-right: 1rem; }
 
+/* Main menu styling */
 .navRightItems {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -1970,10 +1969,11 @@ nav {
   align-items: center;
   flex: 1 0 100%; }
 
+/* Since it's flex margins not needed, and specified indivudually */
 .navRightItems li {
   display: block;
   margin: 0;
-  padding: 0 0 0 0.3em;
+  padding: 0;
   line-height: 1.6em; }
 
 .navRightItems li a {
@@ -1983,38 +1983,46 @@ nav {
 .hnItem.contactButton {
   display: none; }
 
-/* Styling Get started button, margin is needed to occupy free space */
+/* to push menu left from logo*/
 .navRightItems li:first-child {
+  margin-left: auto;
+  margin-right: 1.7rem; }
+
+.navRightItems li:first-child > a {
+  margin-left: 10px; }
+
+.navRightItems li:nth-child(2),
+.navRightItems li:nth-child(3) {
+  margin: 0 1.7rem; }
+
+/* Styling Get started button, margin is needed to occupy free space */
+.navRightItems li:nth-child(4) {
   margin-left: auto; }
 
-.navRightItems li:nth-child(4) {
-  margin-left: auto;
-  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease; }
-
+/* Button styling: extra margin here is unnecessary since it's taken care of by parent element */
 .navRightItems li:nth-child(4) > a {
   background: #38c690;
   border: 1px solid transparent;
+  background-color: #38c690;
+  border-color: #38c690;
   color: #fff;
-  padding: 9px 30px;
-  box-shadow: 0 0.29rem 0.58rem rgba(0, 0, 0, 0.15);
-  border-radius: 9.6px;
+  padding: 10px 30px;
+  margin: 0;
+  font-size: 1.05rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: .6rem;
   white-space: nowrap;
   text-decoration: none;
-  -webkit-transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, -webkit-transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease;
-  transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease; }
+  -webkit-transition: all .25s ease, -webkit-transform .25s ease;
+  transition: all .25s ease, -webkit-transform .25s ease;
+  transition: all .25s ease, transform .25s ease;
+  transition: all .25s ease, transform .25s ease, -webkit-transform .25s ease; }
 
-.navRightItems li:nth-child(4):hover {
-  -webkit-transform: translate3d(0, -3px, 0);
-  transform: translate3d(0, -3px, 0); }
-
-.navRightItems li:nth-child(4) > a:hover {
+.navRightItems li:nth-child(4) > a:hover,
+.navRightItems li:nth-child(4) > a:focus {
   background: #30a87a;
-  box-shadow: none; }
+  transform: translateY(-3px);
+  border-color: #2d9e73; }
 
 /* Color hover styles of menu individually */
 .hnItems li:first-child > a:hover {
