@@ -3,13 +3,25 @@
   display: none;
 }
 /* Match header to main site. Navbar is now taken off banner to be direct child of body to ensure correct sticky. Applied to entire helpdocs */
-header {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    z-index: 10;
+ header {
+   position: sticky;
+   top: 0;
+   background: #fff;
+   z-index: 10;
+   margin: 0 auto;
+   width:auto;
 }
 
+@media (min-width: 1200px) {
+  header {
+      max-width: 1220px;
+    }
+}
+@media (min-width: 992px) {
+  header {
+    padding: 0 16px;
+    }
+}
 .hnItems a,
 footer .ftItems a {
   padding: 0.5rem 0;
@@ -36,8 +48,6 @@ footer .ftItems a {
 }
 
 nav {
-  width: 100%;
-  max-width: 1190px; // -30px to max width since main site uses double padding on both parent and child containers
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,7 +144,7 @@ nav {
   transition: all .25s ease, transform .25s ease;
   transition: all .25s ease, transform .25s ease, -webkit-transform .25s ease;
 }
-
+/* Emulate lift class, aka make it as intended */
 .navRightItems li:nth-child(4) > a:hover,
 .navRightItems li:nth-child(4) > a:focus {
   background: #30a87a;
@@ -169,7 +179,7 @@ footer .ftItems li:nth-child(3) > a {
   padding: 20px 0;
 }
 
-/* Fix breadcrumbs to stay in line */
+/* adjust breadcrumbs to stay in line */
 .bcList li > * {
   vertical-align: middle;
 }
@@ -193,7 +203,7 @@ footer .navRightItems li:nth-child(4) > a {
   color: #fff !important;
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 992px) {
   #overlay {
     display: none !important;
   }
@@ -202,45 +212,92 @@ footer .navRightItems li:nth-child(4) > a {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 992px) {
+  nav{
+    padding: 1rem 16px;
+    flex-wrap: wrap;
+    background: #fff; 
+  }
   .hnMobileNavButton {
     display: block;
+    align-self: center;
   }
+  .mobileMenuPopup.popup {
+    visibility: collapse;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transition:  height 0.35s ease;
+  }
+
+  .hnMobileNavButton.active~.hnMobileItems.mobileMenuPopup.popup{
+    display:block;
+    position: relative;
+    visibility: visible;
+    opacity:1;
+    flex: 1 0 calc(100% - 3rem);
+    box-shadow: none;
+    height: auto;
+  }
+
+
   /* Adjusting Bars built-in mobile nav */
   .hnMobileIcon {
-    stroke: #090a0b;
+    stroke: rgba(0,0,0,.5);
   }
+  .hnMobileNavButton > svg{
+    width: 32.39px;
+    height:26.39px;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+  
   /* Mobile menu adjustment */
   .mobileMenuPopup.popup {
-    background-color: #dbd3ec;
-    padding: 5px 20px 5px 20px;
+    background-color: rgba(111,66,193,.2);
+    padding: 20px 20px 25px 20px;
     border-radius: 6px;
     overflow-y: auto;
+    margin-top: 20px;
   }
-  .popup ul lu {
-    padding: 0 30px;
+  .mobileMenuPopup.popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+  .mobileMenuPopup.popup ul li {
+    padding: 8px 1.7rem;
+    margin: 0;
+  }
+  .mobileMenuPopup.popup ul li a {
+    color: #887f95;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.05rem;
+  }
+
+  .mobileMenuPopup.popup ul li:nth-child(3){
+    margin-bottom: 15px; //to account down caret on main site
+  }
+
   .mobileMenuPopup ul li:nth-child(4) {
     display: inline-block;
     padding: 10px 30px;
     background: #38c690;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     margin: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    border: 1px solid transparent;
   }
   .mobileMenuPopup ul li:nth-child(4) > a {
     color: #fff;
   }
   .mobileMenuPopup ul li:nth-child(5) {
     display: inline-block;
-    padding: 0 1.7rem;
-  }
-
-  .popup ul li a {
-    color: #887f95;
-    font-weight: 400;
-    line-height: 1.5;
-    font-family: Montserrat, sans-serif;
-    font-size: 1rem;
+    padding: .6rem 1.4rem;
+    vertical-align: top;
   }
 
   .navRightItems {
@@ -248,4 +305,3 @@ footer .navRightItems li:nth-child(4) > a {
   }
 }
 
-.hnMobileNavButton.active~.hnMobileItems.mobileMenuPopup.popup{display:block}

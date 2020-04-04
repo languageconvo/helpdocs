@@ -50,21 +50,6 @@ p > img {
   vertical-align: middle;
   line-height: normal; }
 
-.popup {
-  position: absolute;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.26);
-  overflow-y: scroll;
-  padding: 5px 20px; }
-
-.popup ul {
-  list-style: none;
-  padding: 0 5px; }
-
-.popup ul li {
-  margin: 15px 0; }
-
 .popup ul li a {
   transition: opacity .25s ease, margin-left .25s ease; }
 
@@ -256,17 +241,6 @@ p > img {
 
 .stack:hover {
   cursor: pointer; }
-
-nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr 2fr;
-  grid-template-columns: 1fr 2fr 2fr;
-  padding: 15px 70px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: transparent; }
 
 .navLeft {
   -ms-grid-column: 1;
@@ -502,63 +476,53 @@ nav {
 
 .hnMobileNavButton {
   margin: 0 10px;
-  position: absolute;
-  right: 20px;
-  top: 50px; }
+  position: relative; }
 
 .hnMobileIcon {
   stroke: #fff; }
 
 .hnMobileNavButton.active .hnMobileIconTopBar {
-  -webkit-transform: translateY(14px) translateX(0) rotate(-45deg) scale(1.1);
-  transform: translateY(14px) translateX(0) rotate(-45deg) scale(1.1);
+  -webkit-transform: translateY(25px) translateX(-10px) rotate(-45deg) scale(1.4);
+  transform: translateY(25px) translateX(-10px) rotate(-45deg) scale(1.4);
   transition: -webkit-transform .75s ease;
   transition: transform .75s ease;
   transition: -webkit-transform .75s ease, -webkit-transform .75s ease;
   transition: transform .75s ease, -webkit-transform .75s ease; }
 
 .hnMobileNavButton .hnMobileIconTopBar {
-  -webkit-transform: translateY(0) translateX(0) rotate(0) scale(1.1);
-  transform: translateY(0) translateX(0) rotate(0) scale(1.1);
+  -webkit-transform: translateY(0) translateX(0) rotate(0) scale(1);
+  transform: translateY(0) translateX(0) rotate(0) scale(1);
   transition: -webkit-transform .75s ease;
   transition: transform .75s ease;
   transition: -webkit-transform .75s ease, -webkit-transform .75s ease;
   transition: transform .75s ease, -webkit-transform .75s ease; }
 
 .hnMobileNavButton.active .hnMobileIconBottomBar {
-  -webkit-transform: translateY(-11px) translateX(10px) rotate(45deg) scale(1.1);
-  transform: translateY(-11px) translateX(10px) rotate(45deg) scale(1.1);
+  -webkit-transform: translateY(-20px) translateX(20px) rotate(45deg) scale(1.4);
+  transform: translateY(-20px) translateX(20px) rotate(45deg) scale(1.4);
   transition: -webkit-transform .75s ease;
   transition: transform .75s ease;
   transition: -webkit-transform .75s ease, -webkit-transform .75s ease;
   transition: transform .75s ease, -webkit-transform .75s ease; }
 
+.hnMobileNavButton.active .hnMobileIconMiddleBar {
+  stroke: transparent;
+  transition: stroke .75s ease; }
+
 .hnMobileNavButton .hnMobileIconBottomBar {
-  -webkit-transform: translateY(-4px) translateX(0) rotate(0) scale(1.1);
-  transform: translateY(-4px) translateX(0) rotate(0) scale(1.1);
+  -webkit-transform: translateY(0) translateX(0) rotate(0) scale(1);
+  transform: translateY(0) translateX(0) rotate(0) scale(1);
   transition: -webkit-transform .75s ease;
   transition: transform .75s ease;
   transition: -webkit-transform .75s ease, -webkit-transform .75s ease;
   transition: transform .75s ease, -webkit-transform .75s ease; }
 
 .mobileMenuPopup {
-  top: 100px;
-  left: 5px;
-  right: 5px;
   z-index: 3;
   max-height: 60vh;
   font-weight: 600; }
 
-@media only screen and (max-width: 1000px) {
-  nav {
-    -ms-grid-columns: 0 1fr 0;
-    grid-template-columns: 0 1fr 0;
-    grid-template-rows: 1fr;
-    padding: 20px; }
-  .hnLogo {
-    max-height: 50px;
-    margin: 10px;
-    grid-row: 1; }
+@media only screen and (max-width: 992px) {
   .hnBrand,
   .hnItems,
   .hnMobileItems {
@@ -569,11 +533,6 @@ nav {
   .smallSearchContainer {
     grid-column: 2;
     grid-row: 2; } }
-
-@media only screen and (min-width: 1000px) {
-  .hnMobileItems,
-  .hnMobileNavButton {
-    display: none; } }
 
 .scaleSmall {
   transition: -webkit-transform .25s ease;
@@ -670,18 +629,17 @@ span.fa.fa-search {
 
 .scInstantSearch input {
   outline: none;
-  -ms-grid-column: 1;
-  grid-column: 1;
+  -ms-grid-column: 2;
+  grid-column: 2;
   border-radius: 4px;
   padding: 1em;
   background-color: #fff;
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  height: 60px;
+  height: 20px;
   display: block;
-  width: 100%;
-  z-index: 999; }
+  width: calc(100% - 10%); }
 
 .scInstantSearch input,
 input::-webkit-input-placeholder {
@@ -1905,7 +1863,17 @@ header {
   position: sticky;
   top: 0;
   background: #fff;
-  z-index: 10; }
+  z-index: 10;
+  margin: 0 auto;
+  width: auto; }
+
+@media (min-width: 1200px) {
+  header {
+    max-width: 1220px; } }
+
+@media (min-width: 992px) {
+  header {
+    padding: 0 16px; } }
 
 .hnItems a,
 footer .ftItems a {
@@ -1930,8 +1898,6 @@ footer .ftItems a {
   transition-duration: .5s; }
 
 nav {
-  width: 100%;
-  max-width: 1190px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2018,6 +1984,7 @@ nav {
   transition: all .25s ease, transform .25s ease;
   transition: all .25s ease, transform .25s ease, -webkit-transform .25s ease; }
 
+/* Emulate lift class, aka make it as intended */
 .navRightItems li:nth-child(4) > a:hover,
 .navRightItems li:nth-child(4) > a:focus {
   background: #30a87a;
@@ -2046,7 +2013,7 @@ footer .ftItems li:nth-child(3) > a {
   grid-template-columns: 1fr 3fr 1fr;
   padding: 20px 0; }
 
-/* Fix breadcrumbs to stay in line */
+/* adjust breadcrumbs to stay in line */
 .bcList li > * {
   vertical-align: middle; }
 
@@ -2066,48 +2033,81 @@ footer {
 footer .navRightItems li:nth-child(4) > a {
   color: #fff !important; }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 992px) {
   #overlay {
     display: none !important; }
   .mobileMenuPopup {
     display: none !important; } }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 992px) {
+  nav {
+    padding: 1rem 16px;
+    flex-wrap: wrap;
+    background: #fff; }
   .hnMobileNavButton {
-    display: block; }
+    display: block;
+    align-self: center; }
+  .mobileMenuPopup.popup {
+    visibility: collapse;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transition: height 0.35s ease; }
+  .hnMobileNavButton.active ~ .hnMobileItems.mobileMenuPopup.popup {
+    display: block;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    flex: 1 0 calc(100% - 3rem);
+    box-shadow: none;
+    height: auto; }
   /* Adjusting Bars built-in mobile nav */
   .hnMobileIcon {
-    stroke: #090a0b; }
+    stroke: rgba(0, 0, 0, 0.5); }
+  .hnMobileNavButton > svg {
+    width: 32.39px;
+    height: 26.39px;
+    vertical-align: middle;
+    font-size: 16px; }
   /* Mobile menu adjustment */
   .mobileMenuPopup.popup {
-    background-color: #dbd3ec;
-    padding: 5px 20px 5px 20px;
+    background-color: rgba(111, 66, 193, 0.2);
+    padding: 20px 20px 25px 20px;
     border-radius: 6px;
-    overflow-y: auto; }
-  .popup ul lu {
-    padding: 0 30px; }
-  .mobileMenuPopup ul li:nth-child(4) {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #38c690;
-    border-radius: 6px;
+    overflow-y: auto;
+    margin-top: 20px; }
+  .mobileMenuPopup.popup ul {
+    list-style: none;
+    padding: 0;
     margin: 0; }
-  .mobileMenuPopup ul li:nth-child(4) > a {
-    color: #fff; }
-  .mobileMenuPopup ul li:nth-child(5) {
-    display: inline-block;
-    padding: 0 1.7rem; }
-  .popup ul li a {
+  .mobileMenuPopup.popup ul li {
+    padding: 8px 1.7rem;
+    margin: 0; }
+  .mobileMenuPopup.popup ul li a {
     color: #887f95;
     font-weight: 400;
     line-height: 1.5;
     font-family: Montserrat, sans-serif;
-    font-size: 1rem; }
+    font-size: 1.05rem; }
+  .mobileMenuPopup.popup ul li:nth-child(3) {
+    margin-bottom: 15px; }
+  .mobileMenuPopup ul li:nth-child(4) {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #38c690;
+    border-radius: 0.6rem;
+    margin: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent; }
+  .mobileMenuPopup ul li:nth-child(4) > a {
+    color: #fff; }
+  .mobileMenuPopup ul li:nth-child(5) {
+    display: inline-block;
+    padding: .6rem 1.4rem;
+    vertical-align: top; }
   .navRightItems {
     display: none; } }
-
-.hnMobileNavButton.active ~ .hnMobileItems.mobileMenuPopup.popup {
-  display: block; }
 
 #home #top-articles-container,
 #topArticles {
