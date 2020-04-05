@@ -22,6 +22,21 @@
     padding: 0 16px;
     }
 }
+/* Logo styling desktop */
+.hnLogo {
+  max-width: 171px;
+  height: 47px;
+  vertical-align: top;
+  max-height: 47px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+.navLeft {
+  padding: .425rem 0;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
 .hnItems a,
 footer .ftItems a {
   padding: 0.5rem 0;
@@ -33,18 +48,19 @@ footer .ftItems a {
   transition: all .35s ease-in-out;
   -webkit-transition: all .35s ease-in-out;
 }
-
+/* Menu items styling */
 .hnItems li:first-child > a,
 .hnItems li:nth-child(2) > a,
 .hnItems li:nth-child(3) > a {
   margin: 0;
-  padding: 8px 0;
+  padding: 7px 0 9px 0;
 }
 
-.hnItems a:hover {
-  border-bottom: 1.9px solid #38c690;
-  padding-bottom: 4px;
-  transition-duration: .5s;
+.hnItems a:hover > .nav-link {
+    border-bottom-style: solid;
+    border-bottom-width: 1.9px;
+    padding-bottom: 4px;
+    transition-duration: .5s;
 }
 
 nav {
@@ -56,33 +72,15 @@ nav {
   margin: 0 auto;
 }
 
-// Logo styling desktop
-.hnLogo {
-  max-width: 171px;
-  height: 47px;
-  vertical-align: top;
-  max-height: 47px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-}
-
-.navLeft {
-  padding: .425rem 0;
-  display: inline-block;
-  margin-right: 1rem;
-}
 /* Main menu styling */
 .navRightItems {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  list-style: none;
   display: flex;
   flex: 1 0 auto; // flex: grow shrink basis;
   align-items: center;
 }
-
 .navRightItems ul {
   display: flex;
+  list-style: none;
   font-size: 1.05rem;
   justify-content: center;
   flex-direction: row;
@@ -90,17 +88,21 @@ nav {
   flex: 1 0 100%;
 }
 
-/* Since it's flex margins not needed, and specified indivudually */
+/* Since it's flex margins not needed, and specified indivudually when needed */
 .navRightItems li {
   display: block;
   margin: 0;
   padding: 0;
   line-height: 1.6em;
+  font-size: 1.05rem;
 }
 
 .navRightItems li a {
   display: block;
   position: relative;
+}
+.navRightItems li a .nav-link {
+  display: inline;
 }
 
 .hnItem.contactButton {
@@ -132,7 +134,7 @@ nav {
   background-color: #38c690;
   border-color: #38c690;
   color: #fff;
-  padding: 10px 30px;
+  padding: 9px 30px 11px;
   margin: 0;
   font-size: 1.05rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -149,25 +151,34 @@ nav {
 .navRightItems li:nth-child(4) > a:focus {
   background: #30a87a;
   transform: translateY(-3px);
-  border-color: #2d9e73;
 }
 
 /* Color hover styles of menu individually */
-.hnItems li:first-child > a:hover {
-  border-bottom: 1.9px solid #fcad26;
+.hnItems li:first-child > a:hover > .nav-link,
+.hnItems li:first-child > a:focus > .nav-link {
+  border-bottom-color: #fcad26;
 }
 
-.hnItems li:nth-child(2) > a:hover {
-  border-bottom: 1.9px solid #38c690;
+.hnItems li:nth-child(2) > a:hover > .nav-link,
+.hnItems li:nth-child(2) > a:focus > .nav-link {
+  border-bottom-color: #38c690;
 }
 
-.hnItems li:nth-child(3) > a,
-footer .ftItems li:nth-child(3) > a {
+.hnItems li:nth-child(3) > a > .nav-link,
+footer .ftItems li:nth-child(3) > a > .nav-link {
   border-bottom: 1.9px solid #6f42c1;
+  padding-bottom: 4px;
+}
+.navRightItems li:nth-child(4) > a  > .nav-link {
+  border: none;
 }
 
-.hnItems li:nth-child(5) > a:hover {
-  border-bottom: 1.9px solid #fcad26;
+.hnItems li:nth-child(5) > a {
+  padding: 7px 0 9px;
+}
+.hnItems li:nth-child(5) > a:hover,
+.hnItems li:nth-child(5) > a:focus {
+  border-bottom-color: #fcad26;
 }
 
 /* Move search container on child pages to hero like position */
