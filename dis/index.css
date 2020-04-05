@@ -50,12 +50,6 @@ p > img {
   vertical-align: middle;
   line-height: normal; }
 
-.popup ul li a {
-  transition: opacity .25s ease, margin-left .25s ease; }
-
-.popup ul li a:hover {
-  opacity: .6; }
-
 #overlay {
   position: fixed;
   display: none;
@@ -1977,7 +1971,7 @@ nav {
   background-color: #38c690;
   border-color: #38c690;
   color: #fff;
-  padding: 9px 30px 11px;
+  padding: 8px 30px 12px;
   margin: 0;
   font-size: 1.05rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -2013,7 +2007,7 @@ footer .ftItems li:nth-child(3) > a > .nav-link {
   border: none; }
 
 .hnItems li:nth-child(5) > a {
-  padding: 7px 0 9px; }
+  padding: 6px 0 10px; }
 
 .hnItems li:nth-child(5) > a:hover,
 .hnItems li:nth-child(5) > a:focus {
@@ -2096,7 +2090,7 @@ footer .navRightItems li:nth-child(4) > a {
     padding: 0;
     margin: 0; }
   .mobileMenuPopup.popup ul li {
-    padding: 8px 1.7rem;
+    padding: 7px 1.7rem 9px;
     margin: 0; }
   .mobileMenuPopup.popup ul li a {
     color: #887f95;
@@ -2106,19 +2100,24 @@ footer .navRightItems li:nth-child(4) > a {
     font-size: 1.05rem; }
   .mobileMenuPopup.popup ul li:nth-child(3) {
     margin-bottom: 15px; }
+  /* in order to implement lift upon focus display in changed to table-cell */
   .mobileMenuPopup ul li:nth-child(4) {
-    display: inline-block;
+    display: table-cell;
     padding: 10px 30px;
     background: #38c690;
     border-radius: 0.6rem;
     margin: 0;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border: 1px solid transparent; }
+  .mobileMenuPopup ul li:nth-child(4):hover,
+  .mobileMenuPopup ul li:nth-child(4):focus {
+    background: #30a87a;
+    transform: translateY(-3px); }
   .mobileMenuPopup ul li:nth-child(4) > a {
     color: #fff; }
   .mobileMenuPopup ul li:nth-child(5) {
-    display: inline-block;
-    padding: .6rem 1.4rem;
+    display: table-cell;
+    padding: .5rem 1.7rem;
     vertical-align: top; }
   .navRightItems {
     display: none; } }

@@ -134,7 +134,7 @@ nav {
   background-color: #38c690;
   border-color: #38c690;
   color: #fff;
-  padding: 9px 30px 11px;
+  padding: 8px 30px 12px;
   margin: 0;
   font-size: 1.05rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -174,7 +174,7 @@ footer .ftItems li:nth-child(3) > a > .nav-link {
 }
 
 .hnItems li:nth-child(5) > a {
-  padding: 7px 0 9px;
+  padding: 6px 0 10px;
 }
 .hnItems li:nth-child(5) > a:hover,
 .hnItems li:nth-child(5) > a:focus {
@@ -278,7 +278,7 @@ footer .navRightItems li:nth-child(4) > a {
     margin: 0;
   }
   .mobileMenuPopup.popup ul li {
-    padding: 8px 1.7rem;
+    padding: 7px 1.7rem 9px;
     margin: 0;
   }
   .mobileMenuPopup.popup ul li a {
@@ -293,8 +293,9 @@ footer .navRightItems li:nth-child(4) > a {
     margin-bottom: 15px; //to account down caret on main site
   }
 
+ /* in order to implement lift upon focus display in changed to table-cell */
   .mobileMenuPopup ul li:nth-child(4) {
-    display: inline-block;
+    display: table-cell;
     padding: 10px 30px;
     background: #38c690;
     border-radius: 0.6rem;
@@ -302,12 +303,18 @@ footer .navRightItems li:nth-child(4) > a {
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
     border: 1px solid transparent;
   }
+
+  .mobileMenuPopup ul li:nth-child(4):hover,
+  .mobileMenuPopup ul li:nth-child(4):focus {
+    background: #30a87a;
+    transform: translateY(-3px);
+  }
   .mobileMenuPopup ul li:nth-child(4) > a {
     color: #fff;
   }
   .mobileMenuPopup ul li:nth-child(5) {
-    display: inline-block;
-    padding: .6rem 1.4rem;
+    display: table-cell;
+    padding: .5rem 1.7rem;
     vertical-align: top;
   }
 

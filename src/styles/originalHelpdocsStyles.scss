@@ -63,15 +63,6 @@ p > img {
   vertical-align: middle;
   line-height: normal
 }
-
-.popup ul li a {
-  transition: opacity .25s ease, margin-left .25s ease
-}
-
-.popup ul li a:hover {
-  opacity: .6
-}
-
 #overlay {
   position: fixed;
   display: none;
