@@ -11,6 +11,16 @@ gulp.task(
     ),
 );
 
+gulp.task(
+    'deploy',
+    gulp.series(
+        buildHandlebars,
+        buildScripts,
+        buildStyles
+    ),
+);
+
+
 function buildHandlebars() {
     return gulp.src(['src/**/*.hbs'])
         .pipe(gulp.dest('dis'));

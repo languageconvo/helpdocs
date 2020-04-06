@@ -1,7 +1,5 @@
 <!-- top navbar color on mobile -->
-<meta name="theme-color" content="#38c690" />
 
-<section id="homeBanner">
     <!-- Main navigation bar -->
     <header id="homeNav">
         <nav role="navigation">
@@ -27,7 +25,7 @@
                         {{#each config.nav_items}}
                             <li class="hnItem" href="#">
                                 <a class="hnLink" rel="noreferrer" href="{{this.href}}" aria-label="{{this.title}} navigation item">
-                                    {{this.title}}
+                                   <span class="nav-link">{{this.title}}</span>
                                 </a>
                             </li>
                         {{/each}}
@@ -111,20 +109,22 @@
 
             <!-- Mobile navigation -->
             <a href="#" class="hnMobileNavButton" aria-label="Mobile navigation">
-                <svg height="14" viewBox="0 0 20 14" width="20" xmlns="http://www.w3.org/2000/svg">
+                <svg height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg">
                     <g class="hnMobileIcon" fill="none" stroke="none" stroke-width="2">
-                        <path class="hnMobileIconTopBar" d="m0 1h20"/>
-                        <path class="hnMobileIconBottomBar" d="m0 13h20"/>
+                        <path class="hnMobileIconTopBar" d="m4 7h22"/>
+                        <path class="hnMobileIconMiddleBar" d="m4 15h22"/>
+                        <path class="hnMobileIconBottomBar" d="m4 23h22"/>
                     </g>
                 </svg>
             </a>
-            <div class="hnMobileItems mobileMenuPopup popup" aria-label="Mobile navigation popup">
+            <!-- FFS, div is not tabbable => changed to nav, nothing bad in nested navs -->
+            <nav class="hnMobileItems mobileMenuPopup popup" aria-label="Mobile navigation popup">
                 <ul class="hnList">
                     {{#if config.nav_items}}
                         {{#each config.nav_items}}
                             <li class="hnItem" href="#">
                                 <a class="hnLink" href="{{this.href}}" aria-label="{{this.title}} navigation item">
-                                    {{this.title}}
+                                    <span class="nav-link">{{this.title}}</span>
                                 </a>
                             </li>
                         {{/each}}
@@ -141,11 +141,14 @@
                         </li>
                     {{/if}}
                 </ul>
-            </div>
+            </nav>
 
         </nav>
     </header>
 
+<meta name="theme-color" content="#38c690" />
+
+<section id="homeBanner">
     {{#page "categories"}}
         <!-- Search bar -->
         <section id="search-container">
