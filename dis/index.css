@@ -1986,7 +1986,8 @@ nav {
 .navRightItems li:nth-child(4) > a:hover,
 .navRightItems li:nth-child(4) > a:focus {
   background: #30a87a;
-  transform: translateY(-3px); }
+  transform: translateY(-3px);
+  transition: all .25s ease; }
 
 /* Color hover styles of menu individually, don't ask me why so much repetitions - compatibility issues in Edge and Chrome */
 .hnItems li:first-child > a:hover > .nav-link,
@@ -2073,6 +2074,9 @@ footer .navRightItems li:nth-child(4) > a {
     padding: 0;
     margin: 0;
     transition: height 0.35s ease; }
+  /* Only display menu in mobile when hamburger is checked */
+  .navRightItems {
+    display: none; }
   .hnMobileNavButton.active ~ .hnMobileItems.mobileMenuPopup.popup {
     display: block;
     position: relative;
@@ -2119,19 +2123,19 @@ footer .navRightItems li:nth-child(4) > a {
     border-radius: 0.6rem;
     margin: 0;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    border: 1px solid transparent; }
+    border: 1px solid transparent;
+    transition: all .25s ease; }
   .mobileMenuPopup ul li:nth-child(4):hover,
   .mobileMenuPopup ul li:nth-child(4):focus {
     background: #30a87a;
-    transform: translateY(-3px); }
+    transform: translateY(-3px);
+    transition: all .25s ease; }
   .mobileMenuPopup ul li:nth-child(4) > a {
     color: #fff; }
   .mobileMenuPopup ul li:nth-child(5) {
     display: table-cell;
     padding: .5rem 1.7rem;
-    vertical-align: top; }
-  .navRightItems {
-    display: none; } }
+    vertical-align: top; } }
 
 #home #top-articles-container,
 #topArticles {

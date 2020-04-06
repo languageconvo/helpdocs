@@ -12,7 +12,7 @@ gulp.task(
 );
 
 gulp.task(
-    'ship',
+    'deploy',
     gulp.series(
         buildHandlebars,
         buildScripts,
