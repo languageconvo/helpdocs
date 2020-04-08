@@ -1,3 +1,12 @@
+// Sidebar sticky, tuned to sticked navbar
+.stickOnScroll {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 96px;
+  height: calc(70vh - 96px);
+  overflow-y: auto
+}
+
 // bg color of the author "last edited by" section
 #ahAuthorship {
   background-color: $searchBackgroundColor;
