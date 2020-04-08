@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 
 // font weight to match our site
-h1, h2, h3, h4, h5, h6,
-p,
-a,
+h1, h2, h3, h4, h5, h6, p, a{
+  font-weight: 400;
+}
+
 .bcList li // this is the breadcrumb on category pages
 {
   font-weight: 400;
