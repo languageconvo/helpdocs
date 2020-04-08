@@ -14,8 +14,11 @@
 
 @media (min-width: 1200px) {
   header {
-      max-width: 1220px;
+      max-width: 100%;
       padding: 0;
+    }
+  header > nav {
+      width: 1220px;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
