@@ -349,11 +349,3 @@ footer .navRightItems li:nth-child(4) > a {
   }
 
 }
-/* login inline-block again*/
-
-@media only screen and (max-width: 576px) {
-  .mobileMenuPopup ul li:nth-child(5) {
-    display: inline-block;
-    padding: .5rem  1.7rem ;
-  }
-}
