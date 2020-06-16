@@ -44,7 +44,7 @@
 .hnItems a,
 footer .ftItems a {
   padding: 0.5rem 0;
-  margin: 0 1.7rem; 
+  margin: 0 1.7rem;
   color: #887f95;
   font-size: 1.05rem;
   font-weight: 400;
@@ -71,7 +71,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  padding: 1rem 15px;
+  padding: .5rem 1rem;
   margin: 0 auto;
 }
 
@@ -106,7 +106,7 @@ nav {
 /* font-size moved to more specific selector in relation to *a* */
 .navRightItems li a .nav-link {
   display: inline;
-  font-size: 1.05rem;  
+  font-size: 1.05rem;
 }
 
 .hnItem.contactButton {
@@ -115,11 +115,11 @@ nav {
 
 /* to push menu left from logo*/
 .navRightItems li:first-child{
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 1.7rem;
 }
 .navRightItems li:first-child > a{
-  margin-left: 10px; //extra margin to compensate for down caret absent at "help" 
+  margin-left: 10px; //extra margin to compensate for down caret absent at "help"
 }
 .navRightItems li:nth-child(2),
 .navRightItems li:nth-child(3) {
@@ -247,7 +247,7 @@ footer .navRightItems li:nth-child(4) > a {
   nav{
     padding: 1rem 16px;
     flex-wrap: wrap;
-    background: #fff; 
+    background: #fff;
   }
   .hnMobileNavButton {
     display: block;
@@ -262,7 +262,7 @@ footer .navRightItems li:nth-child(4) > a {
     transition:  height 0.35s ease;
   }
 
- /* Only display menu in mobile when hamburger is checked */ 
+ /* Only display menu in mobile when hamburger is checked */
   .navRightItems {
     display: none;
   }
@@ -288,12 +288,12 @@ footer .navRightItems li:nth-child(4) > a {
     vertical-align: middle;
     font-size: 16px;
   }
-  
+
   /* Mobile menu adjustment */
   .mobileMenuPopup.popup {
     background-color: rgba(111,66,193,.2);
     padding: 20px 20px 25px 20px;
-    border-radius: 6px;
+    border-radius: .6rem;
     overflow-y: auto;
     margin-top: 20px;
   }
@@ -340,7 +340,7 @@ footer .navRightItems li:nth-child(4) > a {
 /* Let's be even more specific */
   .mobileMenuPopup ul li:nth-child(4) > a > .nav-link {
     font-size: 1.05rem;
-    color: #fff; 
+    color: #fff;
   }
   .mobileMenuPopup ul li:nth-child(5) {
     display: table-cell;
